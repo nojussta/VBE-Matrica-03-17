@@ -10,7 +10,7 @@ struct rgb
     int b;
 };
 
-void baltosUzdejimas(rgb xx[100][100])
+void whiteCol(rgb xx[100][100])
 {
     for (int i = 0; i < 100; i++)
     {
@@ -23,7 +23,7 @@ void baltosUzdejimas(rgb xx[100][100])
     }
 }
 
-void spalvuUzdejimas(rgb xx[100][100], int x, int dx, int y, int dy, int r, int g, int b)
+void allCol(rgb xx[100][100], int x, int dx, int y, int dy, int r, int g, int b)
 {
     for (int i = y; i < y + dy; y++)
     {
@@ -40,7 +40,7 @@ int main()
 {
     rgb xx[100][100];
     int kiek, x, y, dx, dy, r, g, b;
-    baltosUzdejimas(xx);
+    whiteCol(xx);
     cout << xx[0][0].r << " " << xx[0][0].g << " " << xx[0][0].b << " " << endl;
     ifstream failas("u2017_2.txt");
     failas >> kiek;
@@ -48,7 +48,7 @@ int main()
     for (int a = 0; a < kiek; a++)
     {
         failas >> x >> y >> dx >> dy >> r >> g >> b;
-        spalvuUzdejimas(xx, x, dx, y, dy, r, g, b);
+        allCol(xx, x, dx, y, dy, r, g, b);
     }
 
     return 0;
